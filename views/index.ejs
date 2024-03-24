@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs")  %>
+
+<section class="main">
+    <div id="welcome" class="container welcome">
+        <p>
+            Welcome to Whose That Pokemon?!
+        </p>
+        <p>
+            Test your pokemon knowledge and guess the name of the pokemon shown in the 
+            sprite image of a random pokemon and you will have to guess what it's name is.
+            Correct answers raises your score, and wrong answers resets it.
+        </p>
+        <button id="start-game-btn" class="btn btn-primary">Start Game</button>
+    </div>
+<div class="container game">
+    <img src="" alt="">
+    <div class="feedback-text-container">
+        <h1 id="feedback-text" class="feedback-text">   </h1>
+        <h2 id="pokemon" class="pokemon"></h2>
+    </div>
+    <form>
+        <input type="hidden" id="pokemon-answer">
+        <input type="text" id="pokemon-name" name="pokemon-name" required>
+        <input type="submit" value="Answer" id="answer-btn" class="btn btn-primary">
+        <button id="next-round-btn" class="btn btn-secondary">Next Round</button>
+    </form>
+    
+    <h2 id="answer-counter" class="answer-counter">Counter: <span id="counter-number">0</span></h2>
+</div>
+</section>
+
+<%- include("partials/footer.ejs") %>
+
+<script src="/javascript/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/javascript/main.js"></script>
